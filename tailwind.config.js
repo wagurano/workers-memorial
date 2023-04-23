@@ -39,5 +39,7 @@ module.exports = {
        backgroundOpacity: ['dark']
     }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp')
+  ],
 }

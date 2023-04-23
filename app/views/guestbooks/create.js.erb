@@ -1,0 +1,7 @@
+<% if @guestbook.errors.any? %>
+  alert("오류가 있습니다.")
+<% else %>
+  console.log("감사합니다.")
+  $("#recent-guestbooks").prepend("<%= j render('guestbooks/guestbook', guestbook: @guestbook) %>")
+  $("form")[0].reset();
+<% end %>
