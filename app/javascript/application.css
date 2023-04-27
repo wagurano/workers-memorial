@@ -26,13 +26,11 @@
     background-color: #002633;
     color: #BBBBBB;
 }
-.main-nav {
-    background-color: #002633;
-    color: #BBBBBB;
+.word-keep-all {
+    word-break: keep-all;
 }
 .navbar-scrolled {
-    background-color: #002633;
-    opacity: 0.8;
+    background-color: #34505b;
     border-bottom: var(--gray) 1px solid;
 }
 .navbar>li>a.active:before {

@@ -255,8 +255,12 @@ document.addEventListener('turbolinks:load', function() {
   
             for (i in sections) {
               if (sections[i] <= scrollPosition + nav_height ) {
-                document.querySelector('.navbar>li>.active').classList.remove('active');
-                document.querySelector('a[href*=' + i + ']').classList.add('active');
+                if (document.querySelector('.navbar>li>.active')) {
+                  document.querySelector('.navbar>li>.active').classList.remove('active');
+                }
+                if (document.querySelector('a[href*=' + i + ']')) {
+                  document.querySelector('a[href*=' + i + ']').classList.add('active');
+                }
               }
             }
           }
