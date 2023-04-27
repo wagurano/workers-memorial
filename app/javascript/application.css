@@ -25,8 +25,13 @@
 .hover-grayscale-0:hover .grayscale {
     filter: grayscale(0%);
 }
+.main-nav {
+    background-color: #002633;
+    color: #BBBBBB;
+}
 .navbar-scrolled {
-    background-color: #ffffff;
+    background-color: #002633;
+    opacity: 0.8;
     border-bottom: var(--gray) 1px solid;
 }
 .navbar>li>a.active:before {
