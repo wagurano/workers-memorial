@@ -183,10 +183,10 @@
               .splide__list.grayscale
                 - @safetyzones.each do |safetyzone|
                   .splide__slide
-                    .w-full.h-16.px-4.text-center.pb-3
+                    .w-full.h-16.px-6.text-center.pb-3
                       = link_to safetyzone.link, target: "_blank" do
                         -# = image_tag "safetyzone/#{safetyzone.image}", class: "grayscale mx-auto opacity-80 hover:opacity-100 max-w-full h-auto", alt: safetyzone.title
-                        .grayscale.mx-auto.opacity-80.hover:opacity-100.max-w-full.h-auto= safetyzone.title
+                        .grayscale.mx-auto.opacity-80.hover:opacity-100.max-w-full.h-auto{ style: "word-break: keep-all;" }= safetyzone.title
 / end main
 / =========={ FOOTER }==========
 %footer.bg-gray-50.text-gray-700

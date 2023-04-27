@@ -11,9 +11,6 @@
 }
 /* navslider hover */
 .navslider-hover .splide__arrow {
-  display: none;
-}
-.navslider-hover:hover .splide__arrow {
   display: flex;
 }
 .stroke-primary {
