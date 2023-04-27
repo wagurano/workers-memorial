@@ -93,15 +93,19 @@
           %line.stroke-primary{:style => "stroke-width: 2;stroke-miterlimit: 10;", :x1 => "55.1", :x2 => "100", :y1 => "30.4", :y2 => "30.4"}
           %line.stroke-primary{:style => "stroke-width: 2;stroke-miterlimit: 10;", :x1 => "45.1", :x2 => "0", :y1 => "30.4", :y2 => "30.4"}
         %p.text-gray-500.leading-relaxed.font-light.text-xl.mx-auto.pb-2 언론 보도에서 마주하는 산업재해
+        .flex.flex-wrap.flex-row
+          - @articles.pluck(:tags).join(',').split(',').uniq.each do |tag|
+            .text-xs.inline-flex.items-center.font-bold.leading-sm.uppercase.px-3.py-1.bg-white.text-gray-700.rounded-full.border= "##{tag}"
     .flex.flex-wrap.flex-row
       - @articles.each do |article|
         %figure.flex-shrink.max-w-full.px-3.w-full.group.wow.fadeInUp{:class => "sm:w-1/2 lg:w-1/5", "data-wow-duration" => "1s"}
           .relative.overflow-hidden.cursor-pointer.mb-6
             = link_to article.link, target: "_blank" do
               = image_tag article.image, class: "block w-full h-auto max-h-60 object-cover transform duration-500 grayscale hover:scale-125", alt: article.title
-              .absolute.inset-x-0.bottom-0.h-20.transition-opacity.duration-500.ease-in.opacity-0.group-hover:opacity-100.overflow-hidden.px-4.py-2.text-gray-100.bg-black.text-center
-                %h3.text-base.leading-normal.font-semibold.my-1.text-white= article.title
-                -# %small.d-block= article.tags
+              .absolute.inset-x-0.bottom-0.h-20.transition-opacity.duration-500.ease-in.opacity-100.group-hover:opacity-0.overflow-hidden.px-4.py-2.text-gray-100.bg-black.text-center
+                %h3.text-base.leading-normal.font-semibold.my-1.text-white.line-clamp-1= article.title
+                - article.tags.split(',').each do |tag|
+                  .text-xs.inline-flex.items-center.font-bold.leading-sm.uppercase.px-3.py-1.bg-white.text-gray-700.rounded-full= "##{tag}"
   #contents.section.relative.pt-20.pb-8.md:pt-16.md:pb-0.bg-white
     .container.xl:max-w-6xl.mx-auto.px-4
       %header.text-center.mx-auto.mb-12.lg:px-20
