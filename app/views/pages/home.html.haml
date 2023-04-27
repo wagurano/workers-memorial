@@ -191,21 +191,19 @@
 / =========={ FOOTER }==========
 %footer.bg-gray-50.text-gray-700
   / Footer content
-  #footer-content.relative.pt-8.xl:pt-16.pb-6.xl:pb-12
+  #footer-content.relative.pt-8.xl:pt-16.pb-6.xl:pb-12.dark-green-background
     .container.xl:max-w-6xl.mx-auto.px-4.overflow-hidden
       .flex.flex-wrap.flex-row.lg:justify-between.-mx-3
-        .flex-shrink.max-w-full.w-full.px-3.lg:pr-16{:class => "lg:w-2/5"}
+        .flex-shrink.max-w-full.w-full.px-3.lg:pr-16
           .flex.items-center.mb-2
-            %span.text-3xl.leading-normal.mb-2.font-bold.text-gray-800.mt-2 428 Memento Mori
+            %span.text-3xl.leading-normal.mb-2.font-bold.mt-2 428 Memento Mori
             / <img src="src/img-min/logo.png" alt="LOGO">
-          %p
-            이 프로젝트는 코드포코리아에서 열린 정기 
-            %a{ href: "https://www.codefor.kr/meet-and-hack" } 밋앤핵(Meet & Hack)에서
-            시작된 캠페인의 첫 결과물입니다. 
+          .text-lg{ style: "word-break: keep-all;" }
+            이 프로젝트는 코드포코리아에서 열린 정기 밋앤핵( Meet & Hack, 
+            %a.text-normal{ href: 'https://www.codefor.kr/meet-and-hack' } https://www.codefor.kr/meet-and-hack
+            )에서 시작된 캠페인의 첫 결과물입니다. 
             %br
-            2달에 한번씩 열리는 밋앤핵 산업재해 섹션으로 찾아와주세요.
-            %br
-            더 많은 이들의 기여를 달로스와 fluidto가 기다립니다. 
+            2달에 한번씩 열리는 밋앤핵 산업재해 테이블로 찾아와주세요. 달로스와 fluidto가 더 많은 이들의 기여를 기다립니다. 
           %ul.space-x-3.mt-6.mb-6.Lg:mb-0
             / code for korea
             %li.inline-block
@@ -234,20 +232,6 @@
               %a.hover:text-gray-800{:href => "https://instagram.com", :rel => "noopener noreferrer", :target => "_blank", :title => "Instagram"}
                 %svg{:height => "2rem", :viewbox => "0 0 448 512", :width => "2rem", :xmlns => "http://www.w3.org/2000/svg"}
                   %path{:fill => "currentColor", :d => "M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"}
-        .flex-shrink.max-w-full.w-full.px-3{:class => "lg:w-3/5"}
-          .flex.flex-wrap.flex-row
-            .flex-shrink.max-w-full.mb-6.lg:mb-0{:class => "w-1/2 md:w-1/3"}
-              %h4.text-base.leading-normal.mb-3.uppercase.text-gray-800 트라우마 대처 가이드
-              %ul
-                - @safetyzones[0...4].each do |safetyzone|
-                  %li.py-1.hover:text-gray-900
-                    = link_to safetyzone.title[4..-1], safetyzone.link, class: "text-sm"
-            .flex-shrink.max-w-full.mb-6.lg:mb-0{:class => "w-1/2 md:w-1/3"}
-              %h4.text-base.leading-normal.mb-3.uppercase.text-gray-800 &nbsp;
-              %ul
-                - @safetyzones[4...8].each do |safetyzone|
-                  %li.py-1.hover:text-gray-900
-                    = link_to safetyzone.title[4..-1], safetyzone.link, class: "text-sm"
   / Start footer copyright
   .footer-dark
     .container.xl:max-w-6xl.mx-auto.px-4.py-4.border-t.border-gray-200.border-opacity-10

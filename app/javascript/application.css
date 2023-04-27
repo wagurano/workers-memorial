@@ -22,6 +22,10 @@
 .hover-grayscale-0:hover .grayscale {
     filter: grayscale(0%);
 }
+.dark-green-background {
+    background-color: #002633;
+    color: #BBBBBB;
+}
 .main-nav {
     background-color: #002633;
     color: #BBBBBB;
